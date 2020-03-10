@@ -1,0 +1,311 @@
+/*Menu justification*/
+#menu {
+    background-color: #133f7c;
+    height: 40px;
+    padding: 2px;
+    margin-left: -8px;
+    margin-right: -8px;
+    display: flex; /*2 lines to centrize the menu items on the menu*/
+    justify-content: center;/*2 lines to centrize the menu items on the menu*/
+}
+
+/*Text to left */
+#menu ul,
+#menu li {
+    margin: 0 0;
+    padding: 0 0;
+    list-style: none;
+}
+
+/*Require align menu*/
+#menu li {
+    float: left;
+    display: inline;
+    position: relative;
+    font: bold 15px Arial;
+    border-right: 1px solid #133f7c;
+    border-left: 1px solid #133f7c;
+    text-transform: uppercase
+}
+
+@media(max-width:580px){ /*for small scrren , the menu items will be aligned vertically , each item will be on 1 line alone*/
+#menu {
+    height: auto;
+    display: block;
+    overflow: hidden    
+}
+
+#menu li { /*for small scrren , the menu items will be aligned vertically , each item will be on 1 line alone and will have 100% of the width , text will be centered*/
+width: 100%;
+    text-align: center
+    }
+    
+    p.greyBox{ /*gray rectangle of contact us page , in small screens it will have not full width*/
+        width:auto !important
+    }
+    
+}
+iframe.animated{ /*the map rectange on contact us page will have full width*/
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%
+    }
+
+/*Menu text format*/
+#menu a {/*links of menu items */
+    display: block;
+    line-height: 35px; /*centerize them vertically */
+    padding: 0 14px;
+    text-decoration: none;
+    color: #e4e2ff;
+
+}
+
+/*Initial hide sub-menu*/
+#menu ul.menus {
+    height: auto;
+    width: 180px;
+    background: #133f7c;
+    position: absolute;
+    z-index: 99;
+    display: none;
+    border: 0;
+}
+
+/*Set text of menu*/
+#menu ul.menus li {
+    display: block;
+    width: 100%;
+    font: 16px Arial;
+    text-transform: none;
+}
+
+/*makes sub-menu appear*/
+#menu li:hover ul.menus {
+    display: block
+}
+
+/*stripe colour on right side */
+* {
+    box-sizing: border-box;
+}
+
+.blueLine { /*footer containing copyright*/
+    background: #133f7c;
+    height: 40px;
+    display: flex;
+    justify-content: center; /*text is hotizontally centered */
+    align-items: center;
+    color: whitesmoke;
+    font-size: 13px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+h2 {
+    color: #000000;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.column1 { /*logo of the website*/
+    float: left;
+    padding: 5px;
+    width: 108px /*fized width for the icon*/
+}
+
+.column2 { /*title beside the logo*/
+    float: left;
+    width: calc(61% - 110px); /*calculated width for the title based on widths of logo and icons and texts*/
+    padding: 5px;
+}
+
+.column3 { /*phone and whatsapp icons and text*/
+    float: right; /*icons , text goes right*/
+    width: 25%;
+    padding: 5px;
+    min-width: 321px;
+}
+
+.column3 p {
+    text-align: center;
+}
+
+@media(max-width:877px){
+    .column2{ /*for middle screens , phone-whatsapp block will be on separate line , while title will extend*/
+        width:80%;
+    }
+    .column3{
+        float: none;
+        width: 100%; /*for middle screens , phone-whatsapp block will be on separate line , while title will extend*/
+        clear: both;
+        padding-top: 0px;
+        padding-bottom: 0px
+    }
+
+    .column3 p{
+    text-align: left /*in middle screens , the text of phone-whatsapp will be aligned left*/
+}
+}
+@media(max-width:540px){
+    .column2{
+        width:100% /*for small screens , title block will be in a full width separate line */
+    }
+}
+/* Clearfix (clear floats) */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.contactNumber{
+    color: #133f7c;
+    font-size: 19px;
+    font-weight: bold;
+    
+}
+
+/* Logos */
+.logos {
+    text-align: center;
+    padding: 16px;
+    margin-top: -24px;
+}
+
+.div1{ /*div containing both sliders on index page */
+    height: 500px
+}
+.div1 .slider1 , .div1 .slider2{ /*sliders of index page*/
+    height: 100%;
+    width: 49%;
+    float: left
+}
+
+.div1 .slider1{ /*space between the 2 sliders on index page*/
+    margin-right: 2%
+}
+
+.div1  ul{ /*ul of the 2 sliders*/
+    list-style: none;
+    list-style-position: inside;
+    height: 100%; /*has full width and height of the slider*/
+    width:100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: block;
+    overflow: hidden    ;
+}
+
+.div1  ul li{ /*li elements of the 2 sliders , each one has an image and 2 arrows*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: absolute;
+    opacity: 1;
+    display: block;
+    transition: ease-in-out 1s all;
+    top: 0;
+
+}
+/*set the initial images of the 2 sliders*/
+.div1 .slider1 ul li:nth-child(1){
+    background-image: url(../images/img3.jpg);
+}
+.div1 .slider1 ul li:nth-child(2){
+    background-image: url(../images/4img.jpeg);
+}
+
+.div1 .slider1 ul li:nth-child(3){
+    background-image: url(../images/5img.jpeg);
+}
+
+.div1 .slider1 ul li:nth-child(4){
+    background-image: url(../images/img2.jpg);
+}
+
+.div1 .slider2 ul li:nth-child(4){
+    background-image: url(../images/1img.jpg);
+}
+.div1 .slider2 ul li:nth-child(1){
+    background-image: url(../images/8img.jpeg);
+}
+
+.div1 .slider2 ul li:nth-child(2){
+    background-image: url(../images/7img.jpeg);
+    background-position:top
+}
+
+.div1 .slider2 ul li:nth-child(3){
+    background-image: url(../images/6img.jpeg);
+    background-position: top
+}
+
+
+.div1 ul li a{ /*arrows items of the sliders*/
+    transition: ease-in-out 0.2s all;/*transition for the movement of the arrows*/
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    font-size: 26px;
+    line-height: 30px;
+    color:#aaa
+}
+
+.div1 ul li a:hover{ /*change color when hover on the arrow*/
+    color:#fff
+}
+
+.div1  ul li a.prev{ /*previous arrows*/
+    position: absolute;
+    left:10px;
+    top: calc( 50% -  15px); /*center it vertically*/
+
+    transform: translateX(-50px); /*its initial location is out of the image , it moves when hover on the image*/
+}
+
+.div1  ul li a.next{ /*next arrows*/
+    position: absolute;
+    left:calc(100% - 40px);
+    top: calc( 50% -  15px); /*center it vertically*/
+
+    transform: translateX(50px); /*its initial location is out of the image , it moves when hover on the image*/
+    text-align: right
+}
+
+.div1  ul li a.next i{ /*font awesome icon of the arrow*/
+    line-height: 100%
+}
+
+.div1  ul li:hover  a{ /*hover on the image will cause its arrows to move */
+    transform: translateX(0px);
+}
+
+.div1  ul li.hidden{ /*to hide li containing image (only 1 li is shown on time for each slider*/
+    opacity: 0;
+}
+
+greyBox {
+    border-style: dashed;
+    padding-bottom: 2px;
+    padding-bottom: 2px;
+    //margin-bottom: 2px;
+    float: left;
+    display: inline;
+}
+
+.iframe {
+
+}
+
+ul {
+    font-size: 18px;
+}

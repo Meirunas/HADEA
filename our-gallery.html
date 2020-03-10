@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel=stylesheet href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
+
+
+    <link rel="stylesheet" href="css\visualizer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <style>
+
+    </style>
+</head>
+<body onkeydown="doKdown(event)">
+
+<div class="row">
+
+<div class="column1">
+    <img src="HADEA-Logo.png" alt="Simply Easy Learning" width="100" height="80">
+</div>
+    <div class="column2">
+<h3>Horn of Africa Disability and Elderly Association<br> (HADEA)</h3>
+    </div>
+
+    <div class ="column3">
+        <p class="contactNumber">Call us on: 0208 810 4439<img src="https://img.icons8.com/doodle/36/000000/phone--v1.png"> or   <a href="https://api.whatsapp.com/send?phone=+447980614391">
+            <img border="0" alt="whatsapp" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png" width="35" height="38"></a>	</p>
+    </div>
+</div>
+
+
+<!--MENU-->
+<nav>
+    <ul id='menu'>
+        <li><a class='home' href='index.html'>HOME</a></li>
+
+        <li><a class='prett' href='our-gallery.html'>OUR GALLERY</a>
+            <ul class='menus'>
+                <!--<li><a id="myBtn" title='Dropdown 3'>Dropdown 1</a></li>
+                <li><a href='#' title='Dropdown 2'>Dropdown 2</a></li>
+                <li><a href='#' title='Dropdown 3'>Dropdown 3</a></li>-->
+            </ul>
+        </li>
+
+        <li><a class='prett' href='our-videos.html'>OUR VIDEOS</a>
+            <ul class='menus'>
+                <!--<li><a href='https://en.parkopedia.co.uk' title='Dropdown 3'>Dropdown 1</a></li>
+                <li><a href='#' title='Dropdown 2'>Dropdown 2</a></li>
+                <li><a href='#' title='Dropdown 3'>Dropdown 3</a></li>-->
+            </ul>
+        </li>
+
+        <li><a class='prett' href='about.html'>ABOUT</a>
+            <ul class='menus'>
+                <!--<li><a href='https://en.parkopedia.co.uk' title='Dropdown 3'>Dropdown 1</a></li>
+                <li><a href='#' title='Dropdown 2'>Dropdown 2</a></li>
+                <li><a href='#' title='Dropdown 3'>Dropdown 3</a></li>-->
+            </ul>
+        </li>
+
+        <li><a class='prett' href='contact.html'>CONTACT US</a>
+            <ul class='menus'>
+                <!-- <li><a href='https://en.parkopedia.co.uk' title='Dropdown 3'>Dropdown 1</a></li>
+                 <li><a href='#' title='Dropdown 2'>Dropdown 2</a></li>
+                 <li><a href='#' title='Dropdown 3'>Dropdown 3</a></li>-->
+            </ul>
+        </li>
+
+    </ul>
+</nav>
+
+<h2>Our Gallery</h2>
+
+<div class="row">
+    <div class="column">
+        <img src="images/gallery/1.jpeg" style="width:100%; height: 100%; object-fit: cover;" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="images/gallery/2.jpeg" style="width:100%; height: 100%; object-fit: cover;" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="images/gallery/3.jpeg" style="width:100%; height: 100%; object-fit: cover;" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="images/gallery/4.jpeg" style="width:100%; height: 100%; object-fit: cover;" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="images/gallery/5.jpeg" style="width:100%; height: 100%; object-fit: cover;" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="images/gallery/6.jpeg" style="width:100%; height: 100%;object-fit: cover;" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="images/gallery/7.jpeg" style="width:100%; height: 100%; object-fit: cover;" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="images/gallery/8.jpeg" style="width:100%; height: 100%; object-fit: cover;" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="images/gallery/9.jpeg" style="width:100%; height: 100%; object-fit: cover;" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+    </div>
+    <div class="column">
+        <img src="images/gallery/10.jpeg" style="width:100%; height: 100%; object-fit: cover;" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+    </div>
+</div>
+
+<div id="myModal" class="modal"  >
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content" >
+<div>
+        <div class="mySlides">
+            <div class="numbertext">1 / 10</div>
+            <img src="images/gallery/1.jpeg" style="width: 100%; object-fit: cover;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2 / 10</div>
+            <img src="images/gallery/2.jpeg" style="width:100%; object-fit: cover;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3 / 10</div>
+            <img src="images/gallery/3.jpeg" style="width:100%; object-fit: cover;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4 / 10</div>
+            <img src="images/gallery/4.jpeg" style="width:100%; object-fit: cover;">
+        </div>
+        <div class="mySlides">
+            <div class="numbertext">5 / 10</div>
+            <img src="images/gallery/5.jpeg" style="width:100%; object-fit: cover;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 10</div>
+            <img src="images/gallery/6.jpeg" style="width:100%; object-fit: cover; ">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">7 / 10</div>
+            <img src="images/gallery/7.jpeg" style="width:100%; object-fit: cover;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">8 / 10</div>
+            <img src="images/gallery/8.jpeg" style="width:100%; object-fit: cover;">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">9 / 10</div>
+            <img src="images/gallery/9.jpeg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">10 / 10</div>
+            <img src="images/gallery/10.jpeg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)" >&#10094;</a>
+        <a class="next" onclick="plusSlides(1)" >&#10095;</a>
+
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+</div>
+        </div>
+</div>
+
+<script>
+    var modelOpened=false; // flag is set to true when big image is shown
+    
+    function openModal() {
+        // code to show the big image
+        document.getElementById("myModal").style.display = "block";
+        document.getElementsByTagName("html")[0].style.overflow='hidden';
+        modelOpened=true;
+        
+    }
+
+    function closeModal() {
+        // code to hide big image
+        document.getElementById("myModal").style.display = "none";
+        document.getElementsByTagName("html")[0].style.overflow='auto';
+        modelOpened=false;
+    }
+
+    var slideIndex = 1;// index of the current big image
+    showSlides(slideIndex); //show image1 
+
+    function plusSlides(n) { // if n=1 then it show the next big image  , if n=-1 then it showa the previous big image
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {// if n=1 the first big image is shown on the model , if n=2 the second image is shown on the modal  and so on  until n=10
+        showSlides(slideIndex = n);
+    }
+    function doKdown(e){// function runs when user pressed keyboad button
+      if(!modelOpened) // if no big image is shown then do nothing
+          return;
+        
+        
+        if(window.event) { // IE                    
+      keynum = e.keyCode;
+    } else if(e.which){ // Netscape/Firefox/Opera                   
+      keynum = e.which;
+    }
+        
+    // keynum contains the ascii code of the pressed keyboad button
+    
+    if(keynum==39){ // if the user clicked right button the move to the next big image
+    plusSlides(1);    
+    }
+    if(keynum==37){// if the user clicked left button the move to the previous big image
+    plusSlides(-1);    
+    }
+        
+    }
+
+    function showSlides(n) {// function to show the big image # n on the modal
+        var i;
+        var slides = document.getElementsByClassName("mySlides");// slides array contains all big images
+        // var dots = document.getElementsByClassName("demo");//
+        // var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1} // if n> 10 then return to image #1
+        if (n < 1) {slideIndex = slides.length} // if n<0 then goto image # 10
+        for (i = 0; i < slides.length; i++) { // for loopf to hide the 10 images
+            slides[i].style.display = "none";
+        }
+       
+        slides[slideIndex-1].style.display = "block";// show the image of the current index only
+           }
+</script>
+<p class="animated fadeInLeft delay-2s">Click on image to maximise to fullscreen</p>
+<!-- partial:index.partial.html -->
+<br>
+<div class="stagger-visualizer"></div>
+<!-- partial -->
+
+<!-- Code source visualiser https://codepen.io/Meirunas/pen/qBEKWde-->
+<script  src="galleryAnimation.js"></script><script  src="visualizer.js"></script>
+<br>
+
+<h2>Funders and Accreditations</h2>
+
+<div class="logos">
+    <img src="images/Logos/ealing.gov.jpg" alt="Ealing logo" width="145" height="115">
+    <img src="images/Logos/cvs.png" alt="CVS logo" width="200" height="100">
+    <img src="images/Logos/ECN.jpg" alt="ECN logo" width="100" height="100">
+    <img src="images/Logos/family.png" alt="Family logo" width="100" height="110">
+    <img src="images/Logos/golden.png" alt="Golden logo" width="100" height="100">
+    <img src="images/Logos/grape.png" alt="Grape logo" width="130" height="100">
+    <img src="images/Logos/lottery.png" alt="Lottery logo" width="100" height="100">
+    <img src="images/Logos/southall.png" alt="Southall logo" width="146" height="75">
+    <img src="images/Logos/uthall.jpg" alt="Uthall logo" width="200" height="80">
+</div>
+<div class='blueLine'>&copy; 2020 HADEA - Registered Charity number 1113950</div>
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

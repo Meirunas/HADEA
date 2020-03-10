@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+/*our gallery page */
+/*.row is the container contain all small images , .column is the small image */
+.row > .column {
+    padding: 5px 
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 20%; /*5 images per line*/
+    height: 200px
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1; /*modal window on the top*/
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%; /*modal window has full width and height*/
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+
+}
+
+/* Modal Content */
+.modal-content { /*contents of modal widthow except the closr button*/
+    position: relative;
+    background-color: #fefefe;
+    margin: -78px auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+    padding-bottom: -30px;
+}
+/*
+.rowModal{
+      perspective: 1000px;
+}
+.rowModal .column{
+    height: 100px;
+    width: 10%;
+    transform-style: preserve-3d;
+    transition: ease-in-out all 0.5s
+}
+*/
+
+.modal-content>div{ /*container of all slides on the modal window*/
+    position: relative;
+    height: 631px
+}
+
+/* The Close Button */
+.close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides { /*slides of the modal*/
+    display: none; /*intitally , all slides are hidden*/
+    text-align: center;
+    background-color: black;
+
+}
+.mySlides img{
+ height: 891px; /*same height for each slide on the modal*/
+
+}
+
+/*each slider has different image with different width suitable to that image*/
+.mySlides:nth-child(1) img{
+    width: 100% !important;
+ 
+}
+.mySlides:nth-child(2) img{
+    width: 100% !important;
+ 
+}
+.mySlides:nth-child(3) img{
+    width: 100% !important;
+ 
+}
+.mySlides:nth-child(4) img{
+    width: 100% !important;
+ 
+}
+.mySlides:nth-child(5) img{
+    width: 770px !important;
+ 
+}
+.mySlides:nth-child(6) img{
+    width: 100% !important;
+ 
+}
+.mySlides:nth-child(7) img{
+    width: 750px !important;
+ 
+}
+.mySlides:nth-child(8) img{
+    width: 700px !important;
+ 
+}
+.mySlides:nth-child(9) img{
+width: 700px !important;
+ 
+}
+.mySlides:nth-child(10) img{
+width: 700px !important;
+ 
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next { /*arrows of the modal*/
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 60px;
+    transition: 0.6s ease; /*to do effect of gray box arround the arrow*/
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(128, 128, 128, .5);
+    
+}
+
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+img {
+    margin-bottom: -4px;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow {
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
